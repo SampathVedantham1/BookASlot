@@ -1,8 +1,6 @@
-import { ToastAndroid, Alert, View, Text, FlatList, TouchableOpacity, TextInput, Button, SafeAreaView, StatusBar, StyleSheet, ScrollView } from 'react-native';
-import { Stack, useRouter } from 'expo-router';
-import styles from './styles';
+import { Alert, View, Text, TouchableOpacity, TextInput, SafeAreaView, ScrollView } from 'react-native';
+import styles from '../styles/styles';
 import { useState, React } from 'react';
-import HomeScreen from './HomeScreen';
 
 const FormScreen = ({navigation, route}) => {
     const {slotItem, updateSlots} = route.params;
@@ -80,6 +78,5 @@ const FormScreen = ({navigation, route}) => {
         
         );
 };
-
 
 export default FormScreen;

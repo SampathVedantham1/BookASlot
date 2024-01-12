@@ -1,10 +1,7 @@
-import { userState} from 'react';
-import {view, SafeAreaView, StyleSheet} from 'react-native';
-import { useRouter} from 'expo-router';
-import HomeScreen from './HomeScreen';
+import HomeScreen from './components/HomeScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import FormScreen from './FormScreen';
+import FormScreen from './components/FormScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,14 +16,5 @@ const Home = () => {
     </NavigationContainer>
   )
 }
-
-const styles = StyleSheet.create({
-  headerStyle: {
-    height: 50,
-    backgroundColor: 'grey',
-    color: 'white',
-    fontSize: 20
-  }
-});
 
 export default Home;

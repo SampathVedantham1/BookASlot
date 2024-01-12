@@ -1,7 +1,6 @@
 import { ToastAndroid, Alert, View, Text, FlatList, TouchableOpacity, TextInput, Button, SafeAreaView, StatusBar, StyleSheet, ScrollView } from 'react-native';
-import { Stack, useRouter } from 'expo-router';
 import { useState, React } from 'react';
-import styles from './styles';
+import styles from '../styles/styles';
 
 const HomeScreen = ({navigation}) => {
     const [name, setName] = useState("");
