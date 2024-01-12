@@ -1,20 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { userState} from 'react';
+import {view, SafeAreaView, StyleSheet} from 'react-native';
+import { useRouter} from 'expo-router';
+import HomeScreen from './HomeScreen';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import FormScreen from './FormScreen';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+const Stack = createNativeStackNavigator();
+
+const Home = () => {
+
+  return(
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Book My Glam" component={HomeScreen} backgroundColor='grey'/>
+        <Stack.Screen name="Booking Page" component={FormScreen} backgroundColor='grey'/>
+      </Stack.Navigator>
+    </NavigationContainer>
+  )
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+  headerStyle: {
+    height: 50,
+    backgroundColor: 'grey',
+    color: 'white',
+    fontSize: 20
+  }
 });
+
+export default Home;
